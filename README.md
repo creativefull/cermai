@@ -60,4 +60,4 @@ open terminal and type
 ```
 node app.js
 ```
-if you are using nodemon you can run using ** nodemon **
+if you are using nodemon you can run using **nodemon**
