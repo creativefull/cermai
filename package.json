@@ -7,9 +7,14 @@
   },
   "main": "./app.js",
   "dependencies": {
+    "async": "^1.5.0",
+    "excel-export": "^0.4.1",
     "express": "^4.13.3",
+    "imagemagick": "^0.1.3",
     "jade": "^1.11.0",
     "mongodb": "^2.0.48",
-    "stylus": "^0.52.4"
+    "stylus": "^0.52.4",
+    "underscore": "^1.8.3",
+    "xlsx-to-json": "github:creativefull/node-xlsx-json"
   }
 }

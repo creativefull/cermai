@@ -1,6 +1,6 @@
 module.exports = exports = function(req,res,next) {
 	// -- File Autoload -- //	
-	var helpers = ['cermai'];
+	var helpers = ['cermai', 'excel', 'imageMagic'];
 
 	// -- iterating helpers -- 
 	helpers.forEach(function(doc) {

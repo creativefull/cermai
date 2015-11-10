@@ -3,8 +3,8 @@ var conf = require('../config/config'), config = new conf();
 var mongoDB = require('mongodb').MongoClient;
 var path = require('path');
 var helper = require('../helper');
-// ## ROUTES INIT
 var routes = require('../routes');
+var ErrorHandler = require('../routes/error');
 
 function CermaiJs() {
 	this.app = app;
@@ -36,7 +36,10 @@ function CermaiJs() {
 		cermai.use(express.static(path.join(__dirname, '/../public')));
 		
 		// ## PANGGIL ROUTES
+		////////// ERROR HANDLING ////////////////
 		routes(cermai, db);
+		cermai.use(new ErrorHandler().error404);
+		cermai.use(new ErrorHandler().error500);
 	}
 }
 
