@@ -24,7 +24,7 @@ the open and edit file ** config.js ** on directory config
 ```
 ## Access Handler
 open and edit file ** index.js ** on directory routes
->example i want to add page  ** /example **
+* example i want to add page  ** /example ** *
 ```
   cermai.get('/example', function(req,res,next) {
     res.send('Hello Word');
@@ -32,7 +32,7 @@ open and edit file ** index.js ** on directory routes
 ```
 ## Add New Handler
 add new file on directory router
->example i add new file **welcome.js** and using basic code
+* example i add new file **welcome.js** and using basic code *
 ```
 function Welcome(db) {
   this.index = function(req,res,next) {
@@ -43,7 +43,7 @@ module.exports = Welcome;
 ```
 ## Call Handler
 open and edit file ** index.js ** on directory routes add new code
->example
+* example *
 ```
 var WelcomeHandler = require('welcome');
 var Welcome = WelcomeHandler(db);
