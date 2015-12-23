@@ -15,7 +15,24 @@ function CermaiHelper() {
 				hostname = req.protocol + '://' + config.app.host;
 			}
 			return res.redirect(hostname + '/' + url + '#' + req.url)
-		}		
+		}
+	}
+
+	this.login = function(collection, data, req, cb) {
+		collection.findOne(data, function(err, docs) {
+			if (docs != null) {
+				req.session.cermaiSession = docs;
+				cb(null, true);
+			}
+			else {
+				cb('Login Invalid', null);
+			}
+		});
+	}
+
+	this.logout = function(req, res, redirect) {
+		req.session.destroy();
+		return res.redirect(redirect.toString());
 	}
 }
 module.exports = CermaiHelper;
