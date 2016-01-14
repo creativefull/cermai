@@ -1,5 +1,5 @@
 var express = require('express'), app = express();
-var conf = require('../config/config'), config = new conf();
+var config = require('../config/config.json');
 var mongoDB = require('mongodb').MongoClient;
 var path = require('path');
 var helper = require('../helper');
@@ -17,7 +17,10 @@ function CermaiJs() {
 	}
 
 	this.connect = function(cb) {
-		if (config.connection.replica != null) {
+		if (config.connection == undefined) {
+			cb("connection null", null);
+		}
+		else if (config.connection.replica != null) {
 			var sideList = config.connection.host + ':' + config.connection.port;
 			config.connection.members.forEach(function(x) {
 				sideList += "," + x.host + ':' + x.port;
@@ -48,6 +51,9 @@ function CermaiJs() {
 	}
 	this.initCermai = function(cermai, db) {
 		//// FOR POST REQUEST /////
+		if (db == null) {
+			console.log("CERMAI RUNNNIG WITHOUT CONNECTION");
+		}
 		app.use(bodyParser.json());
 		app.use(bodyParser.urlencoded({ extended: false }));
 		// ## SETTING VIEW ENGINE & CSS PRECOMPILER
