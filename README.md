@@ -3,6 +3,9 @@ Framework Nodejs With Mongodb
 ## What it CermaiJS ?
 CermaiJS is nodejs framework using mongodb connection . cermaijs structured using MVC . so you become more easily understand your code if your application already has a lot of files.
 
+## Install
+clone https://github.com/creativefull/cermai then <code>npm install</code>
+
 ## Docs
 * [Cermai Wiki](wiki)
 
