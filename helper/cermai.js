@@ -1,5 +1,5 @@
 function CermaiHelper() {
-	var conf = require('../config/config'), config = new conf();
+	var config = require('../config/config.json');
 
 	this.example = function(req,res,next) {
 		return res.send("You call example helper :)");
