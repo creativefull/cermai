@@ -7,14 +7,14 @@ First clone this framework.
 open and edit file **config.json** on directory config
 ### Example configuration for application
 ```
-	app = {
+	app : {
 		host : 'localhost',
 		port : 9000
 	}
 ```
 #### Example configuration for connection to mongodb
 ```
-	connection = {
+	connection : {
 		host : 'localhost',
 		port : 27017,
 		db	: 'cermai',
@@ -25,7 +25,7 @@ open and edit file **config.json** on directory config
 ### Example Connection with replica mongodb
 before you using this connection you must create replica in mongodb shell
 ```
- connection = {
+ connection : {
   host : 'localhost',
   port : 27017,
   db : 'cermai',
