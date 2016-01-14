@@ -4,17 +4,17 @@ Framework Nodejs With Mongodb
 **cermaiJS** is nodejs framework using mongodb connection
 ## How to use it ?
 First clone this framework.
-open and edit file **config.js** on directory config
+open and edit file **config.json** on directory config
 ### Example configuration for application
 ```
-	this.app = {
+	app = {
 		host : 'localhost',
 		port : 9000
 	}
 ```
 #### Example configuration for connection to mongodb
 ```
-	this.connection = {
+	connection = {
 		host : 'localhost',
 		port : 27017,
 		db	: 'cermai',
@@ -25,7 +25,7 @@ open and edit file **config.js** on directory config
 ### Example Connection with replica mongodb
 before you using this connection you must create replica in mongodb shell
 ```
- this.connection = {
+ connection = {
   host : 'localhost',
   port : 27017,
   db : 'cermai',
