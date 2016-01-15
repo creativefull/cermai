@@ -19,6 +19,6 @@
     "mongodb": "^2.0.48",
     "redis": "^2.3.0",
     "stylus": "^0.52.4",
-    "underscore": "^1.8.3",
+    "underscore": "^1.8.3"
   }
 }
