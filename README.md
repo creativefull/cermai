@@ -9,10 +9,11 @@ clone https://github.com/creativefull/cermai then <code>npm install</code>
 ## Run
 <code>node app.js</code>
 or if you using nodemon
+
 <code>nodemon</code>
 
 ## Docs
-* [Cermai Wiki](wiki)
+* [Cermai Wiki](https://github.com/creativefull/cermai/wiki)
 
 ## Support
 * [Creativefull](https://github.com/creativefull)
