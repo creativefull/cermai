@@ -8,6 +8,7 @@ clone https://github.com/creativefull/cermai then <code>npm install</code>
 
 ## Run
 <code>node app.js</code>
+
 or if you using nodemon
 
 <code>nodemon</code>
