@@ -1,5 +1,7 @@
 function CermaiHelper() {
 	var config = require('../config/config.json');
+	var moment = require('moment');
+	moment.locale('id');
 
 	this.example = function(req,res,next) {
 		return res.send("You call example helper :)");
@@ -33,6 +35,15 @@ function CermaiHelper() {
 	this.logout = function(req, res, redirect) {
 		req.session.destroy();
 		return res.redirect(redirect.toString());
+	}
+
+	this.shortid = function(req,res,next) {
+		var date = moment().format("YYMMDDHHmmss")
+		var random = Math.ceil(Math.random()*100);
+		var gabungan = date + random;
+		var text = new Buffer(gabungan).toString("base64");
+		text = text.slice(text.length-8).replace(/=/gi, "A");
+		return text;
 	}
 }
 module.exports = CermaiHelper;
