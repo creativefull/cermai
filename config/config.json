@@ -1,9 +1,0 @@
-{
- "app" : {
-  "host" : "localhost",
-  "port" : 9001
- },
- "page" : {
-  "login" : "/login"
- }
-}
