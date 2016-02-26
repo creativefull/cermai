@@ -11,9 +11,16 @@ var bodyParser = require('body-parser');
 function CermaiJs() {
 	this.app = app;
 	this.run = function() {
-		app.listen(config.app.port, config.app.host, function() {
-			console.log("Application Running On " + config.app.host + ":" + config.app.port);
-		});
+		if (config.app.host == undefined) {
+			app.listen(config.app.port, function() {
+				console.log("Application Running On *:" + config.app.port);
+			});
+		}
+		else {
+			app.listen(config.app.port, config.app.host, function() {
+				console.log("Application Running On " + config.app.host + ":" + config.app.port);
+			});			
+		}
 	}
 
 	this.connect = function(cb) {
