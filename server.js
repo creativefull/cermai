@@ -44,7 +44,7 @@ function CermaiJs() {
 			}
 		}
 		else {
-			if (config.connection.user == '' && config.connection.pwd == '') {
+			if ((config.connection.user == '' || config.connection.user == undefined) && ( config.connection.pwd == '' || config.connection.pwd == undefined)) {
 				mongoDB.connect('mongodb://' + config.connection.host + ':' + config.connection.port + '/' + config.connection.db, function(err, db) {
 					cb(err, db);
 				})
