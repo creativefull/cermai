@@ -1,5 +1,6 @@
 var express = require('express'), app = express();
-var config = require('./config.json');
+var mode = process.env.NODE_ENV || 'development';
+var config = require('./config.json')[mode] || require('./config.json')['development'];
 var mongoDB = require('mongodb').MongoClient;
 var path = require('path');
 var helper = require('./helper');

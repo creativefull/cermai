@@ -1,9 +1,20 @@
 {
- "app" : {
-  "host" : "localhost",
-  "port" : 9001
- },
- "page" : {
-  "login" : "/login"
- }
+	"development" : {
+		"app" : {
+			"host" : "localhost",
+			"port" : 9001
+		},
+		"page" : {
+			"login" : "/login"
+		}
+	},
+	"production" : {
+		"app" : {
+			"host" : "localhost",
+			"port" : 9000
+		},
+		"page" : {
+			"login" : "/login"
+		}		
+	}
 }
