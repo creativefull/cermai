@@ -84,13 +84,16 @@ function CermaiJs() {
 		var	session = require('express-session'),
 			redisStore = require('connect-redis')(session),
 			cookieParser = require('cookie-parser');
-
-		cermai.use(cookieParser('cermaisession'));
+		var secretName = "cermaisession";
+		if (config.session) {
+			secretName = config.session.secret || "cermaisession";
+		}
+		cermai.use(cookieParser(secretName));
 		if (config.redis != null) {
 			var redis = require('redis').createClient();
 			cermai.use(session(
 				{
-					secret : 'cermaisession',
+					secret : secretName,
 					store : new redisStore({
 						host : config.redis.host.toString(),
 						port : config.redis.port,
@@ -105,7 +108,7 @@ function CermaiJs() {
 		else {
 			cermai.use(session(
 				{
-					secret : 'cermaisession',
+					secret : secretName,
 					store : '',
 					resave : true
 				}

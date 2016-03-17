@@ -6,6 +6,9 @@
 		},
 		"page" : {
 			"login" : "/login"
+		},
+		"session" : {
+			"secret" : "cermaisession"
 		}
 	},
 	"production" : {
@@ -16,5 +19,8 @@
 		"page" : {
 			"login" : "/login"
 		}		
+	},
+	"session" : {
+		"secret" : "cermaisession"
 	}
 }
