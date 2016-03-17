@@ -1,5 +1,7 @@
+<img src="http://tangituru.com/content/images/2016/03/cermaijs.png" width="100">
 # CermaiJS
 Framework Nodejs With Mongodb
+
 ## What it CermaiJS ?
 CermaiJS is nodejs framework using mongodb connection . cermaijs structured using MVC . so you become more easily understand your code if your application already has a lot of files.
 
