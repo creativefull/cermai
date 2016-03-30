@@ -1,0 +1,1 @@
+function Welcome(a){this.index=function(a,b,c){b.render("welcome")}}module.exports=Welcome;

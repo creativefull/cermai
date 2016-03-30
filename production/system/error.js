@@ -1,0 +1,1 @@
+function Error(){this.error500=function(a,b,c,d){var e=a.status||500;c.status(e),c.render("cermai_page/error",{message:a.message,error:a})},this.error404=function(a,b,c){var d=new Error("Page Not Found");return d.status=404,console.error("Not Found : "+d.message),c(d)}}module.exports=Error;

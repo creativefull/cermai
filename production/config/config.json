@@ -1,0 +1,1 @@
+{"development":{"app":{"host":"localhost","port":9001},"page":{"login":"/login"},"session":{"secret":"cermaisession"}},"production":{"app":{"host":"localhost","port":9000},"page":{"login":"/login"}},"session":{"secret":"cermaisession"}}

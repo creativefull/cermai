@@ -1,0 +1,1 @@
+function cermaiLoading(){$(".cermai-loading").delay(2e3).fadeOut(200,function(){$(".cermai-header").fadeIn(200)})}$(function(){cermaiLoading()});
