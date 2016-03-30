@@ -1,11 +1,11 @@
 var express = require('express'), app = express();
 var mode = process.env.NODE_ENV || 'development';
-var config = require('./config.json')[mode] || require('./config.json')['development'];
+var config = require('../config/config.json')[mode] || require('../config/config.json')['development'];
 var mongoDB = require('mongodb').MongoClient;
 var path = require('path');
-var helper = require('./helper/index.js');
+var helper = require('./helper');
 var userSession = require('./session');
-var routes = require('./routes');
+var routes = require('../routes');
 var ErrorHandler = require('./error');
 var bodyParser = require('body-parser');
 

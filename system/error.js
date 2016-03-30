@@ -12,7 +12,7 @@ function Error() {
 		var err = new Error ('Page Not Found');// {message:'Are you lost ? '};
 		err.status = 404;
 		
-		console.log ('Not Found : '+err.message);
+		console.error ('Not Found : '+err.message);
 		return next(err);
 	}
 }

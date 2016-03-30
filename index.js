@@ -1,4 +1,4 @@
-var server = require('./server'), cermai = new server();
+var server = require('./system/server'), cermai = new server();
 
 
 cermai.connect(function(err, db) {
