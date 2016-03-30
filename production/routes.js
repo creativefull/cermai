@@ -1,1 +1,0 @@
-module.exports=exports=function(a,b){var c=require("./routes/welcome"),d=new c(b);a.get("/",d.index)};
