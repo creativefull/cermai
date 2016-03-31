@@ -1,2 +1,5 @@
 #node module
 node_modules
+
+#production
+production
