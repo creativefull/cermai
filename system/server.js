@@ -8,6 +8,7 @@ var userSession = require('./session');
 var routes = require('../routes');
 var ErrorHandler = require('./error');
 var bodyParser = require('body-parser');
+var logger = require('morgan');
 
 function CermaiJs() {
 	this.app = app;
@@ -62,13 +63,16 @@ function CermaiJs() {
 		if (db == null) {
 			console.log("CERMAI RUNNNIG WITHOUT CONNECTION");
 		}
+		if (mode == 'development') {
+			cermai.use(logger("dev"));
+		}
 		app.use(bodyParser.json());
 		app.use(bodyParser.urlencoded({ extended: false }));
 		// ## SETTING VIEW ENGINE & CSS PRECOMPILER
-		cermai.set('views', path.join(__dirname, '/views'));
+		cermai.set('views', path.join(__dirname, '../views'));
 		cermai.set('view engine', 'jade');
-		cermai.use(require('stylus').middleware(path.join(__dirname, 'public')));
-		cermai.use(express.static(path.join(__dirname, '/public')));
+		cermai.use(require('stylus').middleware(path.join(__dirname, '.../public')));
+		cermai.use(express.static(path.join(__dirname, '../public')));
 		
 		// ## PANGGIL ROUTES
 		////////// ERROR HANDLING ////////////////

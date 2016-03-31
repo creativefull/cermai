@@ -1,5 +1,5 @@
 function CermaiHelper() {
-	var config = require('../config.json');
+	var config = require('../config/config.json');
 	var moment = require('moment');
 	moment.locale('id');
 

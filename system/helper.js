@@ -25,7 +25,7 @@ module.exports = exports = function(req,res,next) {
 	else {
 		// -- iterating helpers -- 
 		helpers.forEach(function(doc) {
-			var helper = require('./' + doc);
+			var helper = require('../helper/' + doc);
 			req[doc] = new helper;
 		})
 		next();
