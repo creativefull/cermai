@@ -1,0 +1,16 @@
+#!/bin/bash
+
+dest_dir=${OPENSHIFT_DATA_DIR};
+app_folder=${OPENSHIFT_REPO_DIR};
+
+# ############## CHECK DIRECTORY TO AUTO BACKUP PUBLIC DATA ############### #
+if [ ! -d "${dest_dir}current" ]; then
+	echo "CermaiJS -> Create Folder Current On Data";
+	mkdir -p "${dest_dir}data";
+	echo "Sucess Create Directory";
+	if [ -d "${app_folder}public" ]; then
+		echo "CermaiJS -> Backup Statics Folder Public";
+		cp -rf ${app_folder}public ${dest_dir}current/
+		echo "Success Backup Statics Folder Public";
+	fi
+fi
