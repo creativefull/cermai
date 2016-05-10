@@ -13,6 +13,9 @@ var logger = require('morgan');
 function CermaiJs() {
 	this.app = app;
 	this.run = function() {
+		config.app.host = process.env.OPENSHIFT_NODEJS_IP || config.app.host;
+		config.app.port = process.env.OPENSHIFT_NODEJS_PORT || config.app.port;
+
 		if (config.app.host == undefined) {
 			app.listen(config.app.port, function() {
 				console.log("Application Running On *:" + config.app.port);
@@ -47,12 +50,14 @@ function CermaiJs() {
 		}
 		else {
 			if ((config.connection.user == '' || config.connection.user == undefined) && ( config.connection.pwd == '' || config.connection.pwd == undefined)) {
-				mongoDB.connect('mongodb://' + config.connection.host + ':' + config.connection.port + '/' + config.connection.db, function(err, db) {
+				var mongouri = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://' + config.connection.host + ':' + config.connection.port + '/';
+				mongoDB.connect(mongouri + config.connection.db, function(err, db) {
 					cb(err, db);
 				})
 			}
 			else {
-				mongoDB.connect('mongodb://' + config.connection.user + ':' + config.connection.pwd + '@' + config.connection.host + ':' + config.connection.port + '/' + config.connection.db, function(err, db) {
+				var mongouri = process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://' + config.connection.user + ':' + config.connection.pwd + '@' + config.connection.host + ':' + config.connection.port + '/';
+				mongoDB.connect(mongouri + config.connection.db, function(err, db) {
 					cb(err, db);
 				})			
 			}
