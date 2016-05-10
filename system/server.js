@@ -73,6 +73,8 @@ function CermaiJs() {
 		cermai.set('view engine', 'jade');
 		cermai.use(require('stylus').middleware(path.join(__dirname, '.../public')));
 		cermai.use(express.static(path.join(__dirname, '../public')));
+		// USING BOWER
+		cermai.use("/bower", express.static(path.join(__dirname, '../bower_components')));
 		
 		// ## PANGGIL ROUTES
 		////////// ERROR HANDLING ////////////////

@@ -1,0 +1,24 @@
+{
+  "name": "CermaiJS",
+  "description": "",
+  "main": "./index.js",
+  "authors": [
+    "Shodiqul Muzaki <user.creativefull@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/creativefull/cermai",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.5",
+    "jquery": "^2.2.3",
+    "angular": "^1.5.5"
+  }
+}
