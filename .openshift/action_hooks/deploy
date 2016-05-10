@@ -14,3 +14,12 @@ if [ ! -d "${dest_dir}current" ]; then
 		echo "Success Backup Statics Folder Public";
 	fi
 fi
+
+
+
+# ######## SYMLINK PUBLIC ############ #
+if [ ! -d "${app_folder}public" ]; then
+	echo " Avocado -> Mulai Symlink Assets Public";
+	ln -sf ${dest_dir}current/ ${app_folder}App/public
+	echo "Berhasil Symlink Assets Public";
+fi
