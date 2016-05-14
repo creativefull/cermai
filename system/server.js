@@ -24,7 +24,7 @@ function CermaiJs() {
 		else {
 			app.listen(config.app.port, config.app.host, function() {
 				console.log("Application Running On " + config.app.host + ":" + config.app.port);
-			});			
+			});
 		}
 	}
 
