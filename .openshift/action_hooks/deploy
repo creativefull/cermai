@@ -20,6 +20,6 @@ fi
 # ######## SYMLINK PUBLIC ############ #
 if [ ! -d "${app_folder}public" ]; then
 	echo " Avocado -> Mulai Symlink Assets Public";
-	ln -sf ${dest_dir}current/ ${app_folder}App/public
+	ln -sf ${dest_dir}current/ ${app_folder}
 	echo "Berhasil Symlink Assets Public";
 fi

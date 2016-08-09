@@ -21,7 +21,7 @@ or if you using nodemon
 ## Support
 * [Creativefull](https://github.com/creativefull)
 * [Tangituru.com](http://tangituru.com)
-* [Otopromo.com](http://otopromo.com)
+* [Syntax-x](http://syntax-x.blogspot.com)
 
 ## Developers
 * [Shodiqul Muzaki](http://facebook.com/muzaksay)
