@@ -3,17 +3,17 @@ function Error() {
 		var statusCode=(err.status || 500);
 		res.status(statusCode);
 	    res.render('cermai_page/error', {
-	      message: err.message,
-	      error: err
+			message: err.message,
+			error: err
 	    });
 	}
 
 	this.error404 = function(req, res, next) {
-		var err = new Error ('Page Not Found');// {message:'Are you lost ? '};
+		var err = new Error ('Page Not Found');
 		err.status = 404;
 		
-		console.error ('Not Found : '+err.message);
-		return next(err);
+		console.error ('Not Found : '+ req.url);
+		res.render('cermai_page/404');
 	}
 }
 
