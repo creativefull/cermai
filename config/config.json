@@ -18,9 +18,9 @@
 		},
 		"page" : {
 			"login" : "/login"
-		}		
-	},
-	"session" : {
-		"secret" : "cermaisession"
+		},
+		"session" : {
+			"secret" : "cermaisession"
+		}
 	}
 }
