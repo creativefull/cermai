@@ -12,6 +12,8 @@ var logger = require('morgan');
 
 function CermaiJs() {
 	this.app = app;
+	// HANDLE ERROR
+	new ErrorHandler().uncaughtException();
 	this.run = function() {
 		config.app.host = process.env.OPENSHIFT_NODEJS_IP || config.app.host;
 		config.app.port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || config.app.port;
