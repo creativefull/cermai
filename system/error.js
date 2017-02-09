@@ -12,8 +12,8 @@ function Error() {
 		var err = new Error ('Page Not Found');
 		err.status = 404;
 		
-		console.error ('Not Found : '+ req.url);
-		res.render('cermai_page/404');
+		console.warn('Not Found : '+ req.url);
+		res.status(404).render('cermai_page/404');
 	}
 }
 

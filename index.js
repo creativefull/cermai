@@ -1,6 +1,5 @@
 var server = require('./system/server'), cermai = new server();
 
-
 cermai.connect(function(err, db) {
 	if (err) console.log(err);
 
