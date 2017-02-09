@@ -76,7 +76,12 @@ function CermaiJs() {
 		// ## SETTING VIEW ENGINE & CSS PRECOMPILER
 		cermai.set('views', path.join(__dirname, '../views'));
 		cermai.set('view engine', 'jade');
-		cermai.use(require('stylus').middleware(path.join(__dirname, '.../public')));
+		cermai.use(require('stylus').middleware({
+			src : __dirname + '/../src/style/',
+			dest : __dirname + "/../public/style/",
+			compress : true,
+			debug : true
+		}));
 		cermai.use(express.static(path.join(__dirname, '../public')));
 		// USING BOWER
 		cermai.use("/bower", express.static(path.join(__dirname, '../bower_components')));
