@@ -22,6 +22,3 @@ or if you using nodemon
 * [Creativefull](https://github.com/creativefull)
 * [Tangituru.com](http://tangituru.com)
 * [Syntax-x](http://syntax-x.blogspot.com)
-
-## Developers
-* [Shodiqul Muzaki](http://facebook.com/muzaksay)
